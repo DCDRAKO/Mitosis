@@ -1,0 +1,144 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+}
+.body{
+    background-color: #191919;
+    overflow-x: hidden;
+
+}
+
+.body::-webkit-scrollbar {
+    display: none; /* Oculta la barra de desplazamiento */
+}
+
+#home, #Upcoming, #Merch, #About_Us, #Conctact{
+    height: 100vh;
+    width: 100vw;
+}
+
+.background{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    object-fit: cover;
+    
+}
+
+.nav{
+    /* background-color: #1919190e; */
+    height: 150px;
+    width: 100%;
+    padding: 0 10%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10%;
+
+    position: fixed;
+    z-index: 100;
+}
+
+.link{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 21px;
+    
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    padding: 0 10px;
+    
+}
+
+.img__logo{
+    height: 57px;
+    background-color: #FFFFFF;
+    padding: 0 10px;
+    
+}
+
+.link:hover{
+    background-color: #FFFFFF;
+    color: #191919;
+    font-weight: 600;
+   
+    
+}
+
+.decoration{
+    position: relative;
+    height: 79px;
+}
+
+.decoration-1{
+    height: 81px;
+    width: 105%;
+    background-color: #b7ff1c;
+    transform: rotate(-2deg);
+    position: absolute;
+}
+.decoration-2{
+    height: 81px;
+    width: 105%;
+    background-color: #ffffff;
+    transform: rotate(2deg);
+    position: absolute;
+}
+
+#Upcoming{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+
+#Upcoming::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    background-image: url(Images/pexels-adrien-olichon-1257089-2387793.webp);
+    background-size: cover;
+    filter: brightness(0.5);
+}
+
+.caja{
+    height: 653px;
+    width: 653px;
+    background-color: #b7ff1c;
+}
+
+.comp{
+    height: 346px;
+    width: 265px;
+}
+
+.text{
+    color: #ffffff7a;
+    margin: 0 0 34px 0;
+}
+
+.next{
+    display: flex;
+    background-color: #b7ff1c;
+    text-decoration: none;
+    color: #191919;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 248px;
+
+}
+
+    
