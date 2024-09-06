@@ -16,7 +16,7 @@
     display: none; /* Oculta la barra de desplazamiento */
 }
 
-#home, #Upcoming, #Merch, #About_Us, #Conctact{
+#home, #Upcoming, #Upcoming-2, #Merch, #About_Us, #Conctact{
     height: 100vh;
     width: 100vw;
 }
@@ -28,6 +28,7 @@
     height: 100%;
     background-size: cover;
     object-fit: cover;
+    z-index: -1;
     
 }
 
@@ -87,12 +88,13 @@
 .decoration-2{
     height: 81px;
     width: 105%;
-    background-color: #ffffff;
+    left: -3px;
+    background-color: #101010;
     transform: rotate(2deg);
     position: absolute;
 }
 
-#Upcoming{
+#Upcoming , #Upcoming-2 {
     position: relative;
     display: flex;
     justify-content: center;
@@ -100,7 +102,7 @@
     gap: 10%;
 }
 
-#Upcoming::before{
+#Upcoming::before,#Upcoming-2::before{
     content: "";
     position: absolute;
     top: 0;
@@ -113,23 +115,30 @@
     filter: brightness(0.5);
 }
 
-.caja{
+.event{
     height: 653px;
     width: 653px;
     background-color: #b7ff1c;
 }
 
-.comp{
+.event__img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.info{
     height: 346px;
     width: 265px;
 }
 
-.text{
+.info__text{
     color: #ffffff7a;
     margin: 0 0 34px 0;
 }
 
-.next{
+.info__buy{
+    font-weight: 600;
     display: flex;
     background-color: #b7ff1c;
     text-decoration: none;
@@ -141,4 +150,168 @@
 
 }
 
+#Upcoming-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrusel{
+    /* background-color: aqua; */
+    width: 30vw;
+    overflow-x: hidden;
+}
+
+.contenido{
+    width: 300%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    transition: all ease .5s;
+    transform: translateX(-33%);
+    padding: 1em 4em ;
+}
+
+
+.contenido__poster{
+    height: 450px;
     
+}
+.controls{
+    /* background-color: bisque; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.left:active, .right:active{
+    background-color: #b7ff1c;
+}
+ 
+.point{
+    background-color: #b7ff1c;
+    height: 0.6em;
+    width: 0.6em;
+    border-radius: 50%;
+}
+
+
+/*----------------------------------FOOTER----------------------------------------------*/
+#footer{
+}
+
+.panels{
+    background-color: #101010;
+    height: 300px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contact, .social, .subscribe{
+    display: flex;
+    flex-direction: column;
+    height: 177px;
+    width: 220px;
+    
+}
+
+h4{ /*Titulos de las secciones del footer*/
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+
+.contact{/*-----------------------------------BLOQUE*/
+    justify-content: space-around;   
+}
+
+
+.contact__address, .contact__phone{
+    color: #BABABA;
+    font-size: 13px;
+    margin-top: 10px;
+    line-height: 15px;
+}
+
+.contact__logo{
+    margin-top: 20px;
+    height: 59px;
+    width: 87px;
+
+}
+
+.social{/*-----------------------------------BLOQUE*/
+    flex-direction: ;
+    align-items: center;
+    gap: 15px;
+}
+.social-links{
+    display: flex;
+    gap: 10px;
+}
+
+.social-media{
+    min-height: 54px;
+    min-width: 54px;
+    background-color: #b7ff1c;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media__logo{
+    max-width: 32px;
+}
+
+.subscribe{/*-----------------------------------BLOQUE*/
+    gap: 10px;
+}
+
+
+.subscribe__input{
+    height: 35px;
+    width: 250px;
+    background-color: #939393;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+
+    &:focus{
+        background-color: aqua;
+    }
+}
+
+.subscribe__button{
+    background-color: #b7ff1c;
+    border: none;
+    font-weight: 600;
+
+    height: 43px;
+    width: 130px;
+
+   
+
+
+    &:active{
+        background-color: #9cda17;
+    }
+}
+
+.terms{
+    background-color: #202020;
+    position: relative;
+    z-index: 100;
+    color: #FFFFFF;
+}
+
+.terms__text{
+    margin: 0 11%;
+}

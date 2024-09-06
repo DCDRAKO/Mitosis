@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 
+
+    <script defer src="carrusel.js"></script>
+
     <!-- -----------------------------------------FONTS----------------------------------------- -->
     
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -17,13 +20,13 @@
 <body class="body">
 
     <div id="home">
-        <video class="background" src="Videos/Video Tech.mp4" controls></video>
+        <video class="background" src="Videos/Video Tech.mp4" autoplay muted loop></video>
         <nav class="nav">
             <a href="#Upcoming" class="link">Upcoming</a>
             <a href="#Merch" class="link">Merch</a>
             <a href="#home" class="logo"><img class="img__logo" src="Images/Logo_White.png" alt="logo"></a>
             <a href="#About_Us" class="link"> About Us</a>
-            <a href="#Conctact" class="link">Contact</a>
+            <a href="#footer" class="link">Contact</a>
         </nav>
     </div>
 
@@ -34,19 +37,78 @@
 
     <div id="Upcoming" >
 
-        <div class="caja"></div>
-        <div class="comp">
-            <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut dolorum placeat, laboriosam nam necessitatibus sapiente fuga sed explicabo nesciunt nemo qui sunt iste tempora aliquid temporibus voluptatem doloremque eaque quia!</p>
-            <a href="#carrito" class="next"> COMPRAR AHORA</a>
+        <div class="event">
+            <img class="event__img" src="Images/HERESY POSTER 1.png" alt="Poster1" >
         </div>
 
-        
-        
+        <div class="info">
+            <p class="info__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut dolorum placeat, laboriosam nam necessitatibus sapiente fuga sed explicabo nesciunt nemo qui sunt iste tempora aliquid temporibus voluptatem doloremque eaque quia!</p>
+            <a class="info__buy" href="#carrito">BUY NOW</a>
+        </div>
+
     </div>
 
+    <div class="decoration">
+        <div class="decoration-1"></div>
+        <div class="decoration-2"></div>
+    </div>
+
+    <div id="Upcoming-2" >
+
+        <div class="carrusel">
+            <div class="contenido">
+                <img src="Images/HERESY POSTER 1.png" alt="" class="contenido__poster">
+                <img src="Images/HERESY POSTER 2.png" alt="" class="contenido__poster">
+                <img src="Images/Poster4.png" alt="" class="contenido__poster">
+            </div>
+
+            <div class="controls">
+
+                <div class="left">
+                    <img src="Images/Arrow Left.svg" alt="" class="left__arrow">
+                </div>
+
+                <div class="point"></div>
+                <div class="point"></div>
+                <div class="point"></div>
+                
+                <div class="right">
+                    <img src="Images/Arrow Right.svg" alt="" class="right__arrow">
+                </div>
+
+            </div>
+        </div>
+        
+    </div>
+<!-- 64f5d17457778 -->
+    <footer id="footer">
+        <div class="panels">
+            <div class="contact">
+                <h4 class="contact__contact">CONTACT</h4>
+                <p class="contact__address">Calle 93 <br> Bogot[a, Colombia</p>
+                <p class="contact__phone">(323) 462-8900 <br> infomitosisprdc.com</p>
+                <img src="Images/Simply_Black_mini.png" alt="MinLogo" class="contact__logo">
+            </div>
+            <div class="social">
+                <h4 class="social__title">SOCIAL</h4>
+                <span class="social-links">
+                    <a href="https://web.facebook.com/" target="_blank" class="social-media"><img src="Icons/facebook.svg" alt="" class="social-media__logo"></a>
+                    <a href="https://www.instagram.com/" target="_blank" class="social-media"><img src="Icons/instagram.svg" alt="" class="social-media__logo"></a>
+                    <a href="https://www.linkedin.com/" target="_blank" class="social-media"><img src="Icons/linkedin.svg" alt="" class="social-media__logo"></a>
+                    <a href="https://x.com" target="_blank" class="social-media"><img src="Icons/Twitter.svg" alt="" class="social-media__logo"></a>
     
-
-
+                </span>
+            </div>
+            <div class="subscribe">
+                <h4 class="subsctibe__title">FIND OUT FIRST</h4>
+                <input class="subscribe__input" type="email">
+                <button class="subscribe__button">SUBSCRIBE</button>
+            </div>
+        </div>
+        <div class="terms">
+            <p class="terms__text">©2024 MITOSIS Bogotá. All Rights Reserved. Terms of Use.</p>
+        </div>
+    </footer>
     
 </body>
 </html>
