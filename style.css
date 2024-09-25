@@ -6,9 +6,14 @@
     font-family: "Space Mono", monospace;
     font-weight: 400;
 }
+
+.html{
+    scroll-behavior: smooth;
+}
 .body{
     background-color: #191919;
     overflow-x: hidden;
+    
 
 }
 
@@ -18,7 +23,7 @@
 
 #home, #Upcoming, #Upcoming-2, #Merch, #About_Us, #Conctact{
     height: 100vh;
-    width: 100vw;
+    width: 100%;
 }
 
 .background{
@@ -41,10 +46,27 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 10%;
+    gap: 8%;
 
     position: fixed;
     z-index: 100;
+
+    left: 0;
+    right: 0;
+    margin: auto;
+   
+    background-color: #9cda17;
+}
+
+.mutear{
+    position: absolute;
+    z-index: 90;
+    height: 100vh;
+    width: 100vw;
+    left: 0;
+    right: 0;
+    top: 0; bottom: 0;
+    margin: auto;
 }
 
 .link{
@@ -112,11 +134,11 @@
     z-index: -1;
     background-image: url(Images/UPComming.png);
     background-size: cover;
-    filter: brightness(0.05);
+    filter: brightness(0.2 );
 }
 #Upcoming-2::before{
     background-image: url(Images/pexels-adrien-olichon-1257089-2387793.webp);
-    filter: brightness(0.1);
+    filter: brightness(0.3);
 
 }
 
@@ -161,28 +183,51 @@
     align-items: center;
 }
 
+/* ------------------------------------CARRUSEL------------------------------------------ */
+
 .carrusel{
-    /* background-color: aqua; */
-    width: 30vw;
-    overflow-x: hidden;
+    /* background-color: aqua;  */
+    width: 20%;
+    height: 85vh;
+
 }
 
 .contenido{
+    height: 90%;
     width: 300%;
-    /* background-color: red; */
+    /* background-color: white; */
+
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    transition: all ease .5s;
-    transform: translateX(-33%);
-    padding: 1em 4em ;
+
+    transition: all ease 0.5s;
 }
 
 
 .contenido__poster{
-    height: 450px;
-    
+    height: 400px;
+    filter: blur(2px);
+    position: relative;
+    margin: -100px;
+
+    &:nth-child(1){
+        z-index: 100;
+    }
+    &:nth-child(2){
+        z-index: 110;
+    }
+    &:nth-child(3){
+        z-index: 90;
+    }
+}
+
+
+.contenido__poster.activo{
+    height: 600px;
+    filter: blur(0);
+    transition: all 0.3s ease-in;
+    z-index: 120;
 }
 .controls{
     /* background-color: bisque; */
@@ -191,16 +236,50 @@
     align-items: center;
     gap: 10px;
 }
+.left{
+    background-image: url(Icons/Arrow\ Left.svg);
+    &:active{
+        background-image: url(Icons/Arrow\ Left\ 2.svg);
+    }
 
-.left:active, .right:active{
-    background-color: #b7ff1c;
 }
+
+.right{
+    background-image: url(Icons/Arrow\ Right.svg);
+
+    &:active{
+        background-image: url(Icons/Arrow\ Right\ 2.svg);
+    }
+
+}
+
+.left, .right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+    border: none;
+    background-color: transparent;
+    background-size: contain;
+    height: 30px;
+    width: 30px;
+}
+
+
+
+
  
 .point{
-    background-color: #b7ff1c;
+    background-color: #999999;
     height: 0.6em;
     width: 0.6em;
     border-radius: 50%;
+}
+
+.point.activo{
+    background-color: #b7ff1c;
+    height: 0.8em;
+    width: 0.8em;
 }
 
 
@@ -232,7 +311,7 @@ h4{ /*Titulos de las secciones del footer*/
 }
 
 
-.contact{/*-----------------------------------BLOQUE*/
+.contact{/*-----------------------------------BLOQUE-----------------------------------------------*/
     justify-content: space-around;   
 }
 
@@ -251,8 +330,7 @@ h4{ /*Titulos de las secciones del footer*/
 
 }
 
-.social{/*-----------------------------------BLOQUE*/
-    flex-direction: ;
+.social{/*-----------------------------------BLOQUE-----------------------------------------------*/
     align-items: center;
     gap: 15px;
 }
@@ -276,7 +354,11 @@ h4{ /*Titulos de las secciones del footer*/
     max-width: 32px;
 }
 
-.subscribe{/*-----------------------------------BLOQUE*/
+.social-media__logo.facebook{
+    transform: translateY(7px);
+}
+
+.subscribe{/*-----------------------------------BLOQUE-----------------------------------------------*/
     gap: 10px;
 }
 
@@ -302,9 +384,6 @@ h4{ /*Titulos de las secciones del footer*/
     height: 43px;
     width: 130px;
 
-   
-
-
     &:active{
         background-color: #9cda17;
     }
@@ -325,58 +404,11 @@ h4{ /*Titulos de las secciones del footer*/
 
 /*------------------------------------------------Mensaje------------------------------------------*/
 
-/* .cajota{
-    position: fixed;
-    height: 100vh;
-    width: 100vw;
-    z-index: 120;
-}
-
-.cajota::before{
-
-    content: "";
-    background-color: #191919;
-    position: fixed;
-    height: 100vh;
-    width: 100vw;
-    z-index: 50;
-    filter: opacity(.9);
-
-}
-
-.caja{
-    position: absolute;
-    height: 50%;
-    width: 50%;
-
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50% , -50%);
-    background-image: url(Images/Banner.png);
-    background-size: contain;
-    z-index: 130;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    ga
-
-}
-
-.cajatitulo{
-    text-transform:uppercase;
-    font-size: 2em;
-
-} */
-
-
 .veil{
     position: fixed;
     height: 100vh;
     width: 100vw;
-    z-index: 120;
+    z-index: 150;
 }
 
 .veil::before{
@@ -452,4 +484,18 @@ h4{ /*Titulos de las secciones del footer*/
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     border-radius: 2px;
+}
+
+
+
+
+@media screen and (max-width:1024px) {
+
+    .nav{
+        gap: 3.1%;
+    }
+    
+    .link{
+        font-size: 19px;
+    }
 }
